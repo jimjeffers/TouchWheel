@@ -21,6 +21,8 @@
 		38E06DAF15EC364B003D88EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E06D8D15EC364B003D88EC /* Foundation.framework */; };
 		38E06DB715EC364B003D88EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38E06DB515EC364B003D88EC /* InfoPlist.strings */; };
 		38E06DBA15EC364B003D88EC /* TouchWheelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E06DB915EC364B003D88EC /* TouchWheelTests.m */; };
+		38E06DCF15EC373C003D88EC /* TouchWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E06DCC15EC373C003D88EC /* TouchWheelView.m */; };
+		38E06DD015EC373C003D88EC /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E06DCE15EC373C003D88EC /* WheelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		38E06DB615EC364B003D88EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38E06DB815EC364B003D88EC /* TouchWheelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchWheelTests.h; sourceTree = "<group>"; };
 		38E06DB915EC364B003D88EC /* TouchWheelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchWheelTests.m; sourceTree = "<group>"; };
+		38E06DCB15EC373C003D88EC /* TouchWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchWheelView.h; sourceTree = "<group>"; };
+		38E06DCC15EC373C003D88EC /* TouchWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchWheelView.m; sourceTree = "<group>"; };
+		38E06DCD15EC373C003D88EC /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
+		38E06DCE15EC373C003D88EC /* WheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				38E06DA015EC364B003D88EC /* MainStoryboard_iPad.storyboard */,
 				38E06DA315EC364B003D88EC /* ViewController.h */,
 				38E06DA415EC364B003D88EC /* ViewController.m */,
+				38E06DCB15EC373C003D88EC /* TouchWheelView.h */,
+				38E06DCC15EC373C003D88EC /* TouchWheelView.m */,
+				38E06DCD15EC373C003D88EC /* WheelView.h */,
+				38E06DCE15EC373C003D88EC /* WheelView.m */,
 				38E06D9215EC364B003D88EC /* Supporting Files */,
 			);
 			path = TouchWheel;
@@ -265,6 +275,8 @@
 				38E06D9815EC364B003D88EC /* main.m in Sources */,
 				38E06D9C15EC364B003D88EC /* AppDelegate.m in Sources */,
 				38E06DA515EC364B003D88EC /* ViewController.m in Sources */,
+				38E06DCF15EC373C003D88EC /* TouchWheelView.m in Sources */,
+				38E06DD015EC373C003D88EC /* WheelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +460,7 @@
 				38E06DBF15EC364B003D88EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E06DC015EC364B003D88EC /* Build configuration list for PBXNativeTarget "TouchWheelTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +469,7 @@
 				38E06DC215EC364B003D88EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

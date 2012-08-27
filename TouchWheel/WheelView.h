@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WheelView.h
 //  TouchWheel
 //
 //  Created by Jim Jeffers on 8/25/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WheelView : UIView
 
 @end
