@@ -23,6 +23,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     touchWheel = [[TouchWheelView alloc] initWithRadius:150 atCenterPoint:CGPointMake(0.0, 0.0)];
+    touchWheel.delegate = self;
     [self.view addSubview:touchWheel];
 }
 
@@ -45,6 +46,10 @@
     } else {
         return YES;
     }
+}
+
+-(void)touchWheelView:(TouchWheelView *)touchWheelView didChangeDirection:(BOOL)clockwise {
+    NSLog(@"Direction: %@",(clockwise ? @"Clockwise" : @"Counter"));
 }
 
 @end

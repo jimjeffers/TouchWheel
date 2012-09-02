@@ -85,26 +85,6 @@
     
     CGPoint centerPoint = CGPointMake(centerX, centerY);
     
-    // We'll determine whether or not the movement is
-    // clockwise by checking the translation of the gesture,
-    // which is effectively the delta, and the location
-    // of the gesture. If we are above the center of the circle
-    // and moving in a negative X direction or conversely
-    // if we are moving in a positive direction when below
-    // the vertical center of the view, then we know we're
-    // moving in a clockwise manner. - JJ
-    
-    CGPoint translation = [recognizer translationInView:self];
-    if (translation.x != 0) {
-        BOOL lastDirection = clockwise;
-        clockwise = ((location.y > centerY && translation.x > 0) || (location.y < centerY && translation.x < 0)) ? YES : NO;
-        if (clockwise != lastDirection) {
-            if ([__delegate respondsToSelector:@selector(touchWheelView:didChangeDirection:)]) {
-                [__delegate touchWheelView:self didChangeDirection:clockwise];
-            }
-        }
-    }
-    
     // Here we actually calculate the angle between the two
     // points. - JJ
 
@@ -140,7 +120,21 @@
     
     float changeInAngle = lastAngle - radians;
     if (abs(changeInAngle) < 1) {
+        
         wheel.transform = CGAffineTransformMakeRotation(-radians);
+        
+        // We'll determine whether or not the movement is
+        // clockwise by checking the delta of the angle we've
+        // just applied to the wheel. - JJ
+        
+        BOOL lastDirection = clockwise;
+        clockwise = (changeInAngle > 0) ? YES : NO;
+        
+        if (clockwise != lastDirection) {
+            if ([__delegate respondsToSelector:@selector(touchWheelView:didChangeDirection:)]) {
+                [__delegate touchWheelView:self didChangeDirection:clockwise];
+            }
+        }
     }
     
     // Reset translation and update the lastAngle to the angle

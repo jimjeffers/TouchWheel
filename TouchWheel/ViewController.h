@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TouchWheelView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <TouchWheelDelegate>
 
 @end
